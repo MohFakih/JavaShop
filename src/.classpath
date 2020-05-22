@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="lib" path="F:/dev/EECE 350/ProjectWorkspace2/Project350/src/commons-cli-1.4.jar"/>
+	<classpathentry kind="lib" path="F:/dev/EECE 350/ProjectWorkspace2/Project350/src/commons-codec-1.13.jar"/>
+	<classpathentry kind="lib" path="F:/dev/EECE 350/ProjectWorkspace2/Project350/src/httpclient5-5.0.jar"/>
+	<classpathentry kind="lib" path="F:/dev/EECE 350/ProjectWorkspace2/Project350/src/httpclient5-cache-5.0.jar"/>
+	<classpathentry kind="lib" path="F:/dev/EECE 350/ProjectWorkspace2/Project350/src/httpclient5-fluent-5.0.jar"/>
+	<classpathentry kind="lib" path="F:/dev/EECE 350/ProjectWorkspace2/Project350/src/httpclient5-testing-5.0.jar"/>
+	<classpathentry kind="lib" path="F:/dev/EECE 350/ProjectWorkspace2/Project350/src/httpclient5-win-5.0.jar"/>
+	<classpathentry kind="lib" path="F:/dev/EECE 350/ProjectWorkspace2/Project350/src/httpcore5-5.0.jar"/>
+	<classpathentry kind="lib" path="F:/dev/EECE 350/ProjectWorkspace2/Project350/src/httpcore5-h2-5.0.jar"/>
+	<classpathentry kind="lib" path="F:/dev/EECE 350/ProjectWorkspace2/Project350/src/httpcore5-reactive-5.0.jar"/>
+	<classpathentry kind="lib" path="F:/dev/EECE 350/ProjectWorkspace2/Project350/src/httpcore5-testing-5.0.jar"/>
+	<classpathentry kind="lib" path="F:/dev/EECE 350/ProjectWorkspace2/Project350/src/jna-5.2.0.jar"/>
+	<classpathentry kind="lib" path="F:/dev/EECE 350/ProjectWorkspace2/Project350/src/jna-platform-5.2.0.jar"/>
+	<classpathentry kind="lib" path="F:/dev/EECE 350/ProjectWorkspace2/Project350/src/mysql-connector-5.1.18.jar"/>
+	<classpathentry kind="lib" path="F:/dev/EECE 350/ProjectWorkspace2/Project350/src/reactive-streams-1.0.2.jar"/>
+	<classpathentry kind="lib" path="F:/dev/EECE 350/ProjectWorkspace2/Project350/src/rxjava-2.2.8.jar"/>
+	<classpathentry kind="lib" path="F:/dev/EECE 350/ProjectWorkspace2/Project350/src/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
