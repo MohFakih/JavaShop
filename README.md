@@ -1,5 +1,5 @@
 # JavaShop
-This is the EECE 350 (Computer Networks) project I individually presented in the Spring 2020 semester.
+This is the EECE 350 (Computer Networks) project I individually worked on during the Spring 2020 semester.
 
 # Description
 
