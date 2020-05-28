@@ -60,7 +60,7 @@ public class AdminPanel extends JPanel {
             {
             	restock();
             }else if (source == changePriceBtn) {
-            	price();
+            	changePrice();
             }else if(source == newItemBtn) {
             	newItem();
             }
@@ -85,7 +85,7 @@ public class AdminPanel extends JPanel {
     	}
 	}
 	
-	void price() {
+	void changePrice() {
 		int itemID = GUIDriver.promptIntInput("itemID", "Please input the id of the item you wish to restock:");
     	if(itemID >-1) {
     		Item item;
@@ -95,7 +95,7 @@ public class AdminPanel extends JPanel {
     		item = itemHandler.fetchedItem;
     		double newPrice = GUIDriver.promptDoubleInput("new price", "Please input the new price of the item in the shop:");
     		if(newPrice>0) {
-    			item.price = newPrice;
+    			item.setPrice(newPrice);
     			AdminRequest req = new AdminRequest(Client.mainUser, item);
     			ActionHandler handler = new ActionHandler();
     			handler.handleRequest(req);
@@ -104,20 +104,19 @@ public class AdminPanel extends JPanel {
 	}
 	
 	void newItem() {
-		Item item = new Item();
 		String name = GUIDriver.promptInput("Input needed", "Enter name of new item");
-		String desc = GUIDriver.promptInput("Input needed", "Enter description of new item");
+		String description = GUIDriver.promptInput("Input needed", "Enter description of new item");
 		String[] categories = {"HOUSEHOLD", "FOOD", "CLOTHES", "EDUCATION", "HYGIENE", "LUXURY", "MISC"};
 		Item.category category = Item.category.valueOf((String) JOptionPane.showInputDialog(GUIDriver.frame, "Chose category", "Chose the category of the item", JOptionPane.QUESTION_MESSAGE, null, categories, categories[0]));
 		int    stock= GUIDriver.promptIntInput("DeltaStock", "Please input the number of new items we got in the shop:");
 		double price= GUIDriver.promptDoubleInput("Price", "Please input the price of the item in the shop:");
 		String path = GUIDriver.promptInput("Input needed", "Enter URL of the picture:");
-		item.name = name;
-		item.Description =desc;
-		item.Category = category;
-		item.stock = stock;
-		item.price = price;
-		item.pathToPic = path;
+
+		Item item = new Item(name, category, price, 0);
+		item.setDescription(description);
+		item.setStock(stock);
+		item.setPathToPic(path);
+		
 		AdminRequest req = new AdminRequest(Client.mainUser, item);
 		ActionHandler handler = new ActionHandler();
 		handler.handleRequest(req);

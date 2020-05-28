@@ -76,11 +76,11 @@ public class DetailsPanel extends JPanel {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		NameLabel = new JLabel("Product name: "+Product.name);
-		DescriptionLabel = new JLabel("Product Description: " + Product.Description);
-		priceLabel = new JLabel("Prodcut price per unit: " + Product.price);
-		stockLabel = new JLabel("Stock: "+Product.stock);
-		categoryLabel = new JLabel("Category: "+Product.Category.toString());
+		NameLabel = new JLabel("Product name: "+Product.getName());
+		DescriptionLabel = new JLabel("Product Description: " + Product.getDescription());
+		priceLabel = new JLabel("Prodcut price per unit: " + Product.getPrice());
+		stockLabel = new JLabel("Stock: "+Product.getStock());
+		categoryLabel = new JLabel("Category: "+Product.getCategoryString());
 	}
 	private class Listener implements ActionListener
 	{

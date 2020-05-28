@@ -58,7 +58,7 @@ public class DBHandler {
 			if(i.ID != 0) {
 				id = ""+i.ID;
 			}
-			String sql = "REPLACE INTO `shop` (`ITEMID`, `name`, `description`, `price`, `stock`, `category`, `pathToPic`) VALUES ("+id+", '"+i.name+"', '"+i.Description+"', '"+i.price+"', '"+i.stock+"', '"+i.Category.toString()+"', '"+i.pathToPic+"');";
+			String sql = "REPLACE INTO `shop` (`ITEMID`, `name`, `description`, `price`, `stock`, `category`, `pathToPic`) VALUES ("+id+", '"+i.name+"', '"+i.description+"', '"+i.price+"', '"+i.stock+"', '"+i.itemCategory.toString()+"', '"+i.pathToPic+"');";
 			try {
 				stmt.executeUpdate(sql);
 			} catch (SQLException e) {
@@ -119,7 +119,7 @@ public class DBHandler {
 			Item out = new Item(rset.getString("name"), Item.category.valueOf(rset.getString("category")), rset.getDouble("price"), rset.getInt("ITEMID"));
 			out.pathToPic = rset.getString("pathToPic");
 			out.stock = rset.getInt("stock");
-			out.Description = rset.getString("Description");
+			out.description = rset.getString("Description");
 			return out;
 		}catch(SQLException e) {
 			e.printStackTrace();
@@ -222,7 +222,7 @@ public class DBHandler {
 				Item o =new Item(rset.getString("name"), Item.category.valueOf(rset.getString("category")), rset.getDouble("price"), rset.getInt("ITEMID")); 
 				o.pathToPic = rset.getString("pathToPic");
 				o.stock = rset.getInt("stock");
-				o.Description = rset.getString("Description");
+				o.description = rset.getString("Description");
 				out.add(o);
 			}
 			return out;
